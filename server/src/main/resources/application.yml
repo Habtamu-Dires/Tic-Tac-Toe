@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/tictactoe
+    username: habt
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            scope:
+              - profile
+              - user:read
+              - user:email
+            clientId: ## clientId
+            clientSecret: # clientSecret
+          GOOGLE:
+            scope:
+              - profile
+              - email
+            clientId: ## clientId
+            clientSecret: ## clientSecret
+
+
+frontend.url: http://localhost:3000
+
